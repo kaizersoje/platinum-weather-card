@@ -253,7 +253,7 @@ export class PlatinumWeatherCard extends LitElement {
               case '24hour':
                 return html`${d.toLocaleString(this.locale || navigator.language, { hour: '2-digit', minute: '2-digit', hour12: false }) + ", " + d.toLocaleDateString(this.locale, { weekday: 'short', day: 'numeric', month: 'short', year: 'numeric' }).replace(",", "")}`;
               case 'system':
-                return html`${d.toLocaleTimeString(navigator.language, { timeStyle: 'short' }).replace(" ", "") + ", " + d.toLocaleDateString(navigator.language).replace(",", "")}`;
+                return html`${d.toLocaleTimeString(this.locale, { timeStyle: 'short' }).replace(" ", "") + ", " + d.toLocaleDateString(this.locale).replace(",", "")}`;
             }
           }
         }
@@ -265,7 +265,7 @@ export class PlatinumWeatherCard extends LitElement {
           case '24hour':
             return html`${d.toLocaleString(this.locale || navigator.language, { hour: '2-digit', minute: '2-digit', hour12: false }) + ", " + d.toLocaleDateString(this.locale, { weekday: 'short', day: 'numeric', month: 'short', year: 'numeric' }).replace(",", "")}`;
           case 'system':
-            return html`${d.toLocaleTimeString(navigator.language, { timeStyle: 'short' }).replace(" ", "") + ", " + d.toLocaleDateString(navigator.language).replace(",", "")}`;
+            return html`${d.toLocaleTimeString(this.locale, { timeStyle: 'short' }).replace(" ", "") + ", " + d.toLocaleDateString(this.locale).replace(",", "")}`;
         }
       }
     }
